@@ -1,0 +1,30 @@
+.category-items {
+  margin: 0 10% 0 10%;
+}
+
+.items-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 1rem;
+  margin: 3rem 0 3rem 0;
+}
+
+.grid-item {
+  grid-row: span 1;
+  grid-column: span 1;
+  align-self: center;
+  justify-self: center;
+}
+
+.item-image {
+  width: 18rem;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.item-text {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
