@@ -7,6 +7,10 @@
   justify-content: space-between;
 }
 
+.header-links {
+  transform: translateX(-10%);
+}
+
 .header-link {
   margin: 0 1rem 0 1rem;
 }

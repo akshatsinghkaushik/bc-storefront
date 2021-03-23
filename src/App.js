@@ -8,6 +8,8 @@ import Header from './header/Header';
 
 const App = () => {
   const [products, setProducts] = useState([]);
+  const [productMap, setProductMap] = useState([]);
+  const [cartMap, setCartMap] = useState(new Map());
 
   //    Load products.json on first App render and store it in App level state varibale products
   useEffect(() => {
@@ -20,11 +22,36 @@ const App = () => {
       })
       .then((json) => {
         setProducts(json);
+
+        const tempMap = new Map(json.map((i) => [i.title, i]));
+        setProductMap(tempMap);
       })
       .catch(function (error) {
         console.error(error);
       });
   }, []);
+
+  const getCartItems = () => {};
+
+  const containsColor = (text) => {
+    const colors = [
+      'Blue',
+      'Green',
+      'Indigo',
+      'Violet',
+      'Yellow',
+      'Orange',
+      'Red',
+    ];
+
+    for (let i in colors) {
+      if (text.includes(colors[i])) {
+        return colors[i];
+      }
+    }
+
+    return false;
+  };
 
   return (
     <div className="App">
@@ -44,12 +71,28 @@ const App = () => {
       {/* Route for the Cart page (not the pop-up) (/cart) */}
       <Route
         path="/cart"
-        render={(props) => <Cart {...props} products={products} />}
+        render={(props) => (
+          <Cart
+            {...props}
+            cartMap={cartMap}
+            setCartMap={setCartMap}
+            products={products}
+            containsColor={containsColor}
+          />
+        )}
       />
       {/* Route for the Product Details page (/product/:id) */}
       <Route
         path="/product/:id"
-        render={(props) => <Product {...props} products={products} />}
+        render={(props) => (
+          <Product
+            {...props}
+            products={products}
+            productMap={productMap}
+            cartMap={cartMap}
+            setCartMap={setCartMap}
+          />
+        )}
       />
     </div>
   );

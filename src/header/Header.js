@@ -10,21 +10,39 @@ const Header = () => {
           <img src="/media/logo.png" alt="Site Logo" />
         </div>
         <div className="header-links">
-          <Link className="header-link" to="/">
+          <Link
+            className="header-link"
+            to="/"
+            style={{ textDecoration: 'none', color: 'black' }}
+          >
             Home
           </Link>
-          <Link className="header-link" to="/">
+          <Link
+            className="header-link"
+            to="/"
+            style={{ textDecoration: 'none', color: 'black' }}
+          >
             Store
           </Link>
-          <Link className="header-link" to="/">
+          <Link
+            className="header-link"
+            to="/"
+            style={{ textDecoration: 'none', color: 'black' }}
+          >
             Journal
           </Link>
-          <Link className="header-link" to="/">
+          <Link
+            className="header-link"
+            to="/"
+            style={{ textDecoration: 'none', color: 'black' }}
+          >
             More
           </Link>
         </div>
         <div className="cart-icon">
-          <Link to="/cart">My Cart</Link>
+          <Link to="/cart" style={{ textDecoration: 'none', color: 'black' }}>
+            My Cart
+          </Link>
         </div>
       </header>
     </>
