@@ -1,4 +1,6 @@
 .Cart {
+  height: 100%;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,6 +165,7 @@ p {
 }
 
 .cart-footer-button {
+  margin-left: 2rem;
   background: none;
   background-color: black;
   color: white;

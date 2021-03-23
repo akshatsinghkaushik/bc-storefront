@@ -8,7 +8,7 @@ import Header from './header/Header';
 
 const App = () => {
   const [products, setProducts] = useState([]);
-  const [productMap, setProductMap] = useState([]);
+  const [productMap, setProductMap] = useState(new Map());
   const [cartMap, setCartMap] = useState(new Map());
 
   //    Load products.json on first App render and store it in App level state varibale products
@@ -33,8 +33,31 @@ const App = () => {
 
   const getCartItems = () => {};
 
+  const addItemToCart = (item, amount) => {
+    let map = cartMap;
+
+    if (cartMap.has(item.title)) {
+      const mapItem = cartMap.get(item.title);
+      map.set(item.title, {
+        ...item,
+        quantity: mapItem.quantity + amount,
+      });
+    } else {
+      map.set(item.title, {
+        ...item,
+        quantity: amount,
+      });
+    }
+
+    setCartMap(map);
+  };
+
   const getProduct = (id) => {
     return productMap.get(id);
+  };
+
+  const updateCartMap = (map) => {
+    setCartMap(map);
   };
 
   const containsColor = (text) => {
@@ -49,8 +72,10 @@ const App = () => {
     ];
 
     for (let i in colors) {
-      if (text.includes(colors[i])) {
-        return colors[i];
+      if (text) {
+        if (text.includes(colors[i])) {
+          return colors[i];
+        }
       }
     }
 
@@ -66,7 +91,7 @@ const App = () => {
                 Passing down the React Components for each Page using 'render' instead of 'component' 
                 so that the app level state variables be passed down as a props     
       */}
-      {/* Route for the Category page, in this case the Plates CAtegory page also acting as the home page (/) */}
+      {/* Route for the Category page, in this case the Plates Category page also acting as the home page (/) */}
       <Route
         exact
         path="/"
@@ -78,10 +103,10 @@ const App = () => {
         render={(props) => (
           <Cart
             {...props}
-            cartMap={cartMap}
+            parentCartMap={cartMap}
             setCartMap={setCartMap}
-            products={products}
             containsColor={containsColor}
+            updateCartMap={updateCartMap}
           />
         )}
       />
@@ -95,6 +120,7 @@ const App = () => {
             getProduct={getProduct}
             cartMap={cartMap}
             setCartMap={setCartMap}
+            addItemToCart={addItemToCart}
           />
         )}
       />

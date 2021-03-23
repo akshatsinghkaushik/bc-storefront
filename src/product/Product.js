@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Product.css';
 
-const Product = ({ match, getProduct }) => {
+const Product = ({ match, getProduct, addItemToCart }) => {
+  const [quantity, setQuantity] = useState(1);
   const product = getProduct(match.params.id);
-  console.log(product);
 
   return (
     <div className="Product">
@@ -26,12 +26,28 @@ const Product = ({ match, getProduct }) => {
             <div className="product-description">{product.description}</div>
             <hr style={{ height: '1px', width: '100%', margin: '0' }} />
             <div className="product-quantity">
-              <div className="total-amount">56</div>
+              <div className="total-amount">{quantity}</div>
               <div className="incre-decre-buttons">
-                <button className="incre-button">+</button>
-                <button>-</button>
+                <button
+                  className="incre-button"
+                  onClick={() => setQuantity(quantity + 1)}
+                >
+                  +
+                </button>
+                <button
+                  onClick={() => {
+                    if (quantity != 1) setQuantity(quantity - 1);
+                  }}
+                >
+                  -
+                </button>
               </div>
-              <button className="add-to-cart">ADD TO CART</button>
+              <button
+                className="add-to-cart"
+                onClick={() => addItemToCart(product, quantity)}
+              >
+                ADD TO CART
+              </button>
             </div>
           </div>
         </div>
