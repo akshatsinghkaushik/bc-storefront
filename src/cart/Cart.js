@@ -1,10 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import { Link, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Cart.css';
 
-const Cart = ({ containsColor, updateCartMap, parentCartMap }) => {
+const Cart = ({ updateCartMap, parentCartMap }) => {
   const [cartMap, setCartMap] = useState(parentCartMap);
   const [cartArr, setCartArr] = useState(Array.from(cartMap.values()));
+
+  const containsColor = (text) => {
+    const colors = [
+      'Blue',
+      'Green',
+      'Indigo',
+      'Violet',
+      'Yellow',
+      'Orange',
+      'Red',
+    ];
+
+    for (let i in colors) {
+      if (text) {
+        if (text.includes(colors[i])) {
+          return colors[i];
+        }
+      }
+    }
+
+    return false;
+  };
 
   const deleteCartItem = (item) => {
     let map = cartMap;

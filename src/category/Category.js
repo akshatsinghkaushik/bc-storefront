@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Category.css';
 import CategoryItems from './CategoryItems';
 
-const Category = ({ products }) => {
+const Category = ({ products, addItemToCart }) => {
   return (
     <>
       <div className="Category">
@@ -12,6 +12,7 @@ const Category = ({ products }) => {
             src="/media/plates-header.jpg"
             alt="image"
           />
+
           <header className="category-header-heading">
             <h1>Plates</h1>
             <hr className="divider" />
@@ -23,7 +24,7 @@ const Category = ({ products }) => {
             </p>
           </header>
         </div>
-        <CategoryItems items={products} />
+        <CategoryItems items={products} addItemToCart={addItemToCart} />
       </div>
     </>
   );

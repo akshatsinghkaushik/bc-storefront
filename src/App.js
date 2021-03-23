@@ -38,14 +38,25 @@ const App = () => {
 
     if (cartMap.has(item.title)) {
       const mapItem = cartMap.get(item.title);
+      if (mapItem.quantity && amount)
+        map.set(item.title, {
+          ...item,
+          quantity: mapItem.quantity + amount,
+        });
+      else
+        map.set(item.title, {
+          ...item,
+          quantity: mapItem.quantity,
+        });
+    } else if (amount) {
       map.set(item.title, {
         ...item,
-        quantity: mapItem.quantity + amount,
+        quantity: amount,
       });
     } else {
       map.set(item.title, {
         ...item,
-        quantity: amount,
+        quantity: 1,
       });
     }
 
@@ -58,28 +69,6 @@ const App = () => {
 
   const updateCartMap = (map) => {
     setCartMap(map);
-  };
-
-  const containsColor = (text) => {
-    const colors = [
-      'Blue',
-      'Green',
-      'Indigo',
-      'Violet',
-      'Yellow',
-      'Orange',
-      'Red',
-    ];
-
-    for (let i in colors) {
-      if (text) {
-        if (text.includes(colors[i])) {
-          return colors[i];
-        }
-      }
-    }
-
-    return false;
   };
 
   return (
@@ -95,7 +84,13 @@ const App = () => {
       <Route
         exact
         path="/"
-        render={(props) => <Category {...props} products={products} />}
+        render={(props) => (
+          <Category
+            {...props}
+            products={products}
+            addItemToCart={addItemToCart}
+          />
+        )}
       />
       {/* Route for the Cart page (not the pop-up) (/cart) */}
       <Route
@@ -104,8 +99,6 @@ const App = () => {
           <Cart
             {...props}
             parentCartMap={cartMap}
-            setCartMap={setCartMap}
-            containsColor={containsColor}
             updateCartMap={updateCartMap}
           />
         )}
