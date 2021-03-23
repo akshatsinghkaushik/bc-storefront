@@ -33,6 +33,10 @@ const App = () => {
 
   const getCartItems = () => {};
 
+  const getProduct = (id) => {
+    return productMap.get(id);
+  };
+
   const containsColor = (text) => {
     const colors = [
       'Blue',
@@ -88,7 +92,7 @@ const App = () => {
           <Product
             {...props}
             products={products}
-            productMap={productMap}
+            getProduct={getProduct}
             cartMap={cartMap}
             setCartMap={setCartMap}
           />
