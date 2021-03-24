@@ -30,6 +30,7 @@
 
 .popup-item-details {
   margin: 0.5rem 0 0 1rem;
+  color: black;
 }
 
 .popup-item-details h3 {
@@ -67,6 +68,13 @@
   justify-content: space-between;
 }
 
+.popup-footer p {
+  font-size: 14px;
+  color: rgb(160, 158, 158);
+  letter-spacing: 0.7px;
+  font-weight: 500;
+}
+
 .popup-footer-checkout {
   margin: 1rem 1rem 1rem 0;
   background: none;
@@ -78,6 +86,8 @@
   cursor: pointer;
   outline: inherit;
   font-size: small;
+  font-weight: 600;
+  letter-spacing: 0.7px;
 }
 
 .popup-footer-view {
@@ -92,4 +102,5 @@
   cursor: pointer;
   outline: inherit;
   font-size: small;
+  font-weight: 600;
 }

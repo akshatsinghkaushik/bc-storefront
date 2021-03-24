@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryItemOverlay Renders correctly 1`] = `
+<div
+  className="overlay"
+  style={
+    Object {
+      "display": "none",
+    }
+  }
+>
+  <a
+    alt="VIEW DETAILS"
+    className="overlay-details"
+    href="/product/Mashiko-Yaki Saucer"
+    onClick={[Function]}
+    style={
+      Object {
+        "fontSize": "10px",
+        "textDecoration": "none",
+      }
+    }
+  >
+    VIEW DETAILS
+  </a>
+  <button
+    alt="ADD TO CART"
+    className="overlay-add-to-cart"
+    onClick={[Function]}
+    style={
+      Object {
+        "fontSize": "10px",
+      }
+    }
+  >
+    ADD TO CART
+  </button>
+</div>
+`;

@@ -1,4 +1,24 @@
 .App {
   margin: 0;
   box-sizing: border-box;
+  min-height: 100vh;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid rgba(223, 223, 223, 0.795);
+}
+
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0.5rem 0 0.5rem 0;
+  letter-spacing: 3px;
+}
+p,
+a {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1.1px;
 }

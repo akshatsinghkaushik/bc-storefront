@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart Renders correctly 1`] = `
+<div
+  className="Cart"
+>
+  <header
+    className="cart-title"
+  >
+    <h1>
+      Shopping Cart
+    </h1>
+  </header>
+  <div
+    className="cart-items"
+  >
+    <div
+      className="product-item"
+    >
+      <p
+        className=""
+      >
+        Product
+      </p>
+      <div
+        className="cart-details"
+      >
+        <p
+          className="quantity"
+        >
+          Quantity
+        </p>
+        <p
+          className="total"
+        >
+          Total
+        </p>
+        <p
+          className="action"
+        >
+          Action
+        </p>
+      </div>
+    </div>
+    <div
+      className="cart-items-grid"
+    >
+      <p
+        style={
+          Object {
+            "padding": "2rem",
+            "textAlign": "center",
+          }
+        }
+      >
+        No Items in Cart
+      </p>
+    </div>
+    <hr
+      style={
+        Object {
+          "height": "1px",
+          "margin": "0",
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      className="cart-overview"
+    >
+      <div />
+      <div
+        className="cart-overview-container"
+      >
+        <p>
+          CART OVERVIEW
+        </p>
+        <div
+          className="cart-overview-details"
+        >
+          <div
+            className="titles"
+          >
+            <p>
+              SUBTOTAL
+            </p>
+            <br />
+            <p>
+              TOTAL
+            </p>
+          </div>
+          <div
+            className="prices"
+          >
+            <p>
+              $ 
+              0.00
+            </p>
+            <br />
+            <p
+              style={
+                Object {
+                  "color": "black",
+                  "fontSize": "14px",
+                }
+              }
+            >
+              $
+              0.00
+               CAD
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr
+      style={
+        Object {
+          "height": "1px",
+          "margin": "0",
+          "width": "100%",
+        }
+      }
+    />
+    <div
+      className="cart-footer"
+    >
+      <a
+        className="continue-shopping"
+        href="/"
+        onClick={[Function]}
+      >
+        CONTINUE SHOPPING
+      </a>
+      <button
+        className="cart-footer-button"
+      >
+        CHECKOUT ($
+        0.00
+        )
+      </button>
+    </div>
+  </div>
+</div>
+`;

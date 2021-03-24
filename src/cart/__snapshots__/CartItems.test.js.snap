@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartItems Renders correctly 1`] = `
+<div
+  className="cart-items-grid"
+>
+  <p
+    style={
+      Object {
+        "padding": "2rem",
+        "textAlign": "center",
+      }
+    }
+  >
+    No Items in Cart
+  </p>
+</div>
+`;

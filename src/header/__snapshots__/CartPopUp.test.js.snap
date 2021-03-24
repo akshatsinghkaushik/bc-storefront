@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartPopUp Renders correctly 1`] = `
+<div
+  className="cart-popup"
+  style={
+    Object {
+      "display": "none",
+    }
+  }
+>
+  <div
+    className="popup-items-container"
+  >
+    <div
+      style={
+        Object {
+          "padding": "1rem",
+          "textAlign": "center",
+        }
+      }
+    >
+      No Items in Cart
+    </div>
+  </div>
+  <hr
+    style={
+      Object {
+        "height": "1px",
+        "margin": "0",
+        "width": "100%",
+      }
+    }
+  />
+  <div
+    className="popup-footer"
+    style={
+      Object {
+        "margin": "1rem 1rem 0 1rem",
+      }
+    }
+  >
+    <p>
+      TOTAL
+    </p>
+    <p>
+      $
+      0.00
+    </p>
+  </div>
+  <div
+    className="popup-footer"
+  >
+    <a
+      className="popup-footer-view"
+      href="/cart"
+      onClick={[Function]}
+    >
+      VIEW CART
+    </a>
+    <button
+      className="popup-footer-checkout"
+    >
+      CHECKOUT
+    </button>
+  </div>
+</div>
+`;

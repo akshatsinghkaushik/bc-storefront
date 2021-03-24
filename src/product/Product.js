@@ -2,20 +2,25 @@ import React, { useState, useContext } from 'react';
 import './Product.css';
 import CartContext from '../context/CartContext';
 
-const Product = ({ match }) => {
+const Product = ({ match, testParam }) => {
   const [quantity, setQuantity] = useState(1);
   const cartContext = useContext(CartContext);
 
-  const product = cartContext.getProduct(match.params.id);
+  let product;
+  if (match !== undefined) {
+    product = cartContext.getProduct(match.params.id);
+  } else {
+    product = cartContext.getProduct(testParam);
+  }
 
   return (
     <div className="Product">
       {/* {match.params.id} */}
       <div className="product-container">
-        <div className="product-location">
+        <h5 className="product-location">
           HOME/PLATES/
           <span style={{ color: 'gray' }}>{product.title.toUpperCase()}</span>
-        </div>
+        </h5>
         <div className="product-content">
           <img
             className="product-image"
@@ -25,7 +30,9 @@ const Product = ({ match }) => {
           <div className="product-details">
             <div className="product-brand">{product.brand}</div>
             <div className="product-title">{product.title}</div>
-            <div className="product-price">$ {product.price}</div>
+            <div className="product-price">
+              $ {Number(product.price).toFixed(2)}
+            </div>
             <div className="product-description">{product.description}</div>
             <hr style={{ height: '1px', width: '100%', margin: '0' }} />
             <div className="product-quantity">

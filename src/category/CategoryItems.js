@@ -45,8 +45,10 @@ const CategoryItems = () => {
             >
               <div className="item-text">
                 <p>{item.brand}</p>
-                <h3>{item.title}</h3>
-                <p>{`$ ${item.price}`}</p>
+                <h3>{item.title.toUpperCase()}</h3>
+                <p style={{ fontSize: '13px', fontWeight: '600' }}>{`$ ${Number(
+                  item.price
+                ).toFixed(2)}`}</p>
               </div>
             </Link>
           </div>

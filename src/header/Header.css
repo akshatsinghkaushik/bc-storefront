@@ -16,3 +16,9 @@
 .header-link {
   margin: 0 1rem 0 1rem;
 }
+
+.my-cart {
+  display: inline;
+  letter-spacing: 1px;
+  font-size: 13px;
+}

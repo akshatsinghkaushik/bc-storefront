@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cart Renders correctly 1`] = `
+<div
+  className="Product"
+>
+  <div
+    className="product-container"
+  >
+    <h5
+      className="product-location"
+    >
+      HOME/PLATES/
+      <span
+        style={
+          Object {
+            "color": "gray",
+          }
+        }
+      >
+        BLUE STRIPE STONEWARE PLATE
+      </span>
+    </h5>
+    <div
+      className="product-content"
+    >
+      <img
+        alt="Blue Stripe Stoneware Plate"
+        className="product-image"
+        src="/media/blue-stripe-stoneware-plate.jpg"
+      />
+      <div
+        className="product-details"
+      >
+        <div
+          className="product-brand"
+        >
+          Kiriko
+        </div>
+        <div
+          className="product-title"
+        >
+          Blue Stripe Stoneware Plate
+        </div>
+        <div
+          className="product-price"
+        >
+          $ 
+          40.00
+        </div>
+        <div
+          className="product-description"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at purus pulvinar, placerat turpis ac, interdum metus. In eget massa sed enim hendrerit auctor a eget.
+        </div>
+        <hr
+          style={
+            Object {
+              "height": "1px",
+              "margin": "0",
+              "width": "100%",
+            }
+          }
+        />
+        <div
+          className="product-quantity"
+        >
+          <div
+            className="total-amount"
+          >
+            1
+          </div>
+          <div
+            className="incre-decre-buttons"
+          >
+            <button
+              className="incre-button"
+              onClick={[Function]}
+            >
+              +
+            </button>
+            <button
+              onClick={[Function]}
+            >
+              -
+            </button>
+          </div>
+          <button
+            className="add-to-cart"
+            onClick={[Function]}
+          >
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

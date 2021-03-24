@@ -17,13 +17,16 @@ const CategoryItemOverlay = ({ hover, hoverElem, item }) => {
     >
       <Link
         className="overlay-details"
+        alt="VIEW DETAILS"
         to={`/product/${item.title}`}
-        style={{ textDecoration: 'none' }}
+        style={{ textDecoration: 'none', fontSize: '10px' }}
       >
         VIEW DETAILS
       </Link>
       <button
         className="overlay-add-to-cart"
+        alt="ADD TO CART"
+        style={{ fontSize: '10px' }}
         onClick={() => cartContext.addItemToCart(item)}
       >
         ADD TO CART

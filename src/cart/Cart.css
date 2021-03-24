@@ -1,6 +1,6 @@
 .Cart {
-  height: 100%;
-  min-height: 100vh;
+  height: max-content;
+  min-height: calc(100vh - 4.1rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,54 +21,13 @@
   background-color: white;
 }
 
-.cart-items-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(1, auto);
-  grid-gap: 0;
-  margin: 1rem 0 1rem 0;
-}
-
-.cart-grid-item {
-  grid-row: span 1;
-  grid-column: span 1;
-  align-self: center;
-  justify-self: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 45rem;
-  height: 8rem;
-  margin-bottom: 2rem;
-}
-
-.cart-item-image {
-  width: 7rem;
-  height: 4rem;
-  object-fit: cover;
-  margin-right: 1rem;
-}
-
-.cart-item-text {
-  text-align: left;
-  text-decoration: none;
-  color: black;
-}
-
 .product-item {
   padding: 2rem 0 0 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-
-.product-items {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  color: rgb(131, 129, 129);
 }
 
 .amount {
@@ -100,6 +59,7 @@ p {
 }
 .cart-overview-container p {
   margin: 0 0 1rem 0;
+  color: rgb(160, 158, 158);
 }
 
 .cart-overview-details {
@@ -114,6 +74,7 @@ p {
 
 .cart-overview-details .prices {
   text-align: end;
+  transform: translateX(1rem);
 }
 
 .quantity,
@@ -122,35 +83,6 @@ p {
   margin: 0 1rem 0 1rem;
   display: flex;
   align-items: center;
-}
-
-.incre-decre-buttons {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 0 0.3rem;
-}
-
-.incre-button {
-  margin: 0 0 0.3rem 0;
-}
-
-.total-amount {
-  background-color: rgba(223, 223, 223, 0.795);
-  padding: 1rem;
-}
-
-.cart-details .quantity {
-  padding-right: 1rem;
-}
-
-.amount .action {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 1rem;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
 }
 
 .cart-total {
@@ -162,16 +94,4 @@ p {
 .cart-total p {
   display: flex !important;
   justify-self: right !important;
-}
-
-.cart-footer-button {
-  margin-left: 2rem;
-  background: none;
-  background-color: black;
-  color: white;
-  border: none;
-  padding: 1rem;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
 }

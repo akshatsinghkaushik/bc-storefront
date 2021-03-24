@@ -34,7 +34,27 @@
   margin: 0 0 2rem 0;
 }
 
+.product-brand {
+  color: gray;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.product-title {
+  font-size: 35px;
+  font-weight: 600;
+  width: 22rem;
+  text-align: center;
+}
+
+.product-price {
+  color: rgb(153, 153, 153);
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .product-description {
+  color: rgb(109, 108, 108);
   width: 25rem;
 }
 

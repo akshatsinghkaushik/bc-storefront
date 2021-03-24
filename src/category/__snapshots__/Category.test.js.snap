@@ -1,0 +1,500 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Category Renders correctly 1`] = `
+<div
+  className="Category"
+>
+  <div
+    className="category-header"
+  >
+    <img
+      alt="image"
+      className="category-header-image"
+      src="/media/plates-header.jpg"
+    />
+    <header
+      className="category-header-heading"
+    >
+      <h1>
+        Plates
+      </h1>
+      <hr
+        className="divider"
+      />
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis mauris velit. Maecenas faucibus nec enim tincidunt vestibulum. Pellentesque auctor diam sed nibh venenatis blandit.
+      </p>
+    </header>
+  </div>
+  <div
+    className="category-items"
+  >
+    <div
+      className="items-grid"
+    >
+      <div
+        className="grid-item"
+        onMouseEnter={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <img
+          alt="Blue Stripe Stoneware Plate"
+          className="item-image"
+          src="/media/blue-stripe-stoneware-plate.jpg"
+        />
+        <div
+          className="overlay"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            alt="VIEW DETAILS"
+            className="overlay-details"
+            href="/product/Blue Stripe Stoneware Plate"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+                "textDecoration": "none",
+              }
+            }
+          >
+            VIEW DETAILS
+          </a>
+          <button
+            alt="ADD TO CART"
+            className="overlay-add-to-cart"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+              }
+            }
+          >
+            ADD TO CART
+          </button>
+        </div>
+        <a
+          href="/product/Blue Stripe Stoneware Plate"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          <div
+            className="item-text"
+          >
+            <p>
+              Kiriko
+            </p>
+            <h3>
+              BLUE STRIPE STONEWARE PLATE
+            </h3>
+            <p
+              style={
+                Object {
+                  "fontSize": "13px",
+                  "fontWeight": "600",
+                }
+              }
+            >
+              $ 40.00
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        className="grid-item"
+        onMouseEnter={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <img
+          alt="Hand Painted Blue Flat Dish"
+          className="item-image"
+          src="/media/hand-painted-blue-flat-dish.jpg"
+        />
+        <div
+          className="overlay"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            alt="VIEW DETAILS"
+            className="overlay-details"
+            href="/product/Hand Painted Blue Flat Dish"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+                "textDecoration": "none",
+              }
+            }
+          >
+            VIEW DETAILS
+          </a>
+          <button
+            alt="ADD TO CART"
+            className="overlay-add-to-cart"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+              }
+            }
+          >
+            ADD TO CART
+          </button>
+        </div>
+        <a
+          href="/product/Hand Painted Blue Flat Dish"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          <div
+            className="item-text"
+          >
+            <p>
+              Kiriko
+            </p>
+            <h3>
+              HAND PAINTED BLUE FLAT DISH
+            </h3>
+            <p
+              style={
+                Object {
+                  "fontSize": "13px",
+                  "fontWeight": "600",
+                }
+              }
+            >
+              $ 28.00
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        className="grid-item"
+        onMouseEnter={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <img
+          alt="Heme"
+          className="item-image"
+          src="/media/heme.jpg"
+        />
+        <div
+          className="overlay"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            alt="VIEW DETAILS"
+            className="overlay-details"
+            href="/product/Heme"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+                "textDecoration": "none",
+              }
+            }
+          >
+            VIEW DETAILS
+          </a>
+          <button
+            alt="ADD TO CART"
+            className="overlay-add-to-cart"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+              }
+            }
+          >
+            ADD TO CART
+          </button>
+        </div>
+        <a
+          href="/product/Heme"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          <div
+            className="item-text"
+          >
+            <p>
+              Dust & Form
+            </p>
+            <h3>
+              HEME
+            </h3>
+            <p
+              style={
+                Object {
+                  "fontSize": "13px",
+                  "fontWeight": "600",
+                }
+              }
+            >
+              $ 52.00
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        className="grid-item"
+        onMouseEnter={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <img
+          alt="Mashiko-Yaki Green Small Plate"
+          className="item-image"
+          src="/media/mashiko-yaki-green-small-plate.jpg"
+        />
+        <div
+          className="overlay"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            alt="VIEW DETAILS"
+            className="overlay-details"
+            href="/product/Mashiko-Yaki Green Small Plate"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+                "textDecoration": "none",
+              }
+            }
+          >
+            VIEW DETAILS
+          </a>
+          <button
+            alt="ADD TO CART"
+            className="overlay-add-to-cart"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+              }
+            }
+          >
+            ADD TO CART
+          </button>
+        </div>
+        <a
+          href="/product/Mashiko-Yaki Green Small Plate"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          <div
+            className="item-text"
+          >
+            <p>
+              Kiriko
+            </p>
+            <h3>
+              MASHIKO-YAKI GREEN SMALL PLATE
+            </h3>
+            <p
+              style={
+                Object {
+                  "fontSize": "13px",
+                  "fontWeight": "600",
+                }
+              }
+            >
+              $ 28.00
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        className="grid-item"
+        onMouseEnter={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <img
+          alt="Mashiko-Yaki Indigo Small Plate"
+          className="item-image"
+          src="/media/mashiko-yaki-indigo-small-plate.jpg"
+        />
+        <div
+          className="overlay"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            alt="VIEW DETAILS"
+            className="overlay-details"
+            href="/product/Mashiko-Yaki Indigo Small Plate"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+                "textDecoration": "none",
+              }
+            }
+          >
+            VIEW DETAILS
+          </a>
+          <button
+            alt="ADD TO CART"
+            className="overlay-add-to-cart"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+              }
+            }
+          >
+            ADD TO CART
+          </button>
+        </div>
+        <a
+          href="/product/Mashiko-Yaki Indigo Small Plate"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          <div
+            className="item-text"
+          >
+            <p>
+              Kiriko
+            </p>
+            <h3>
+              MASHIKO-YAKI INDIGO SMALL PLATE
+            </h3>
+            <p
+              style={
+                Object {
+                  "fontSize": "13px",
+                  "fontWeight": "600",
+                }
+              }
+            >
+              $ 28.00
+            </p>
+          </div>
+        </a>
+      </div>
+      <div
+        className="grid-item"
+        onMouseEnter={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+      >
+        <img
+          alt="Mashiko-Yaki Saucer"
+          className="item-image"
+          src="/media/mashiko-yaki-saucer.jpg"
+        />
+        <div
+          className="overlay"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          <a
+            alt="VIEW DETAILS"
+            className="overlay-details"
+            href="/product/Mashiko-Yaki Saucer"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+                "textDecoration": "none",
+              }
+            }
+          >
+            VIEW DETAILS
+          </a>
+          <button
+            alt="ADD TO CART"
+            className="overlay-add-to-cart"
+            onClick={[Function]}
+            style={
+              Object {
+                "fontSize": "10px",
+              }
+            }
+          >
+            ADD TO CART
+          </button>
+        </div>
+        <a
+          href="/product/Mashiko-Yaki Saucer"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          <div
+            className="item-text"
+          >
+            <p>
+              Kiriko
+            </p>
+            <h3>
+              MASHIKO-YAKI SAUCER
+            </h3>
+            <p
+              style={
+                Object {
+                  "fontSize": "13px",
+                  "fontWeight": "600",
+                }
+              }
+            >
+              $ 18.00
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

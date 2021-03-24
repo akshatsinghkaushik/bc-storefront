@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartFooter Renders correctly 1`] = `
+<div
+  className="cart-footer"
+>
+  <a
+    className="continue-shopping"
+    href="/"
+    onClick={[Function]}
+  >
+    CONTINUE SHOPPING
+  </a>
+  <button
+    className="cart-footer-button"
+  >
+    CHECKOUT ($
+    0.00
+    )
+  </button>
+</div>
+`;
