@@ -89,6 +89,11 @@ const CartProvider = ({ children }) => {
           cartMapArr.map((item) => (total += item.price * item.quantity));
           return total;
         },
+        getCartQuantity: () => {
+          let total = 0;
+          cartMapArr.map((item) => (total += item.quantity));
+          return total;
+        },
       }}
     >
       {children}

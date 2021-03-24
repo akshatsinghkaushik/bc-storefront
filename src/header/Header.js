@@ -2,9 +2,11 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import CartPopUp from './CartPopUp';
+import CartContext from '../context/CartContext';
 
 const Header = ({}) => {
   const [cartPopUp, setCartPopUp] = useState(false);
+  const cartContext = useContext(CartContext);
 
   return (
     <>
@@ -63,7 +65,10 @@ const Header = ({}) => {
             onClick={() => setCartPopUp(!cartPopUp)}
             style={{ cursor: 'pointer' }}
           >
-            My Cart
+            My Cart{' '}
+            {cartContext.cartMapArr.length === 0
+              ? ''
+              : `(${cartContext.getCartQuantity()})`}
             <img
               style={{
                 height: '0.7rem',
