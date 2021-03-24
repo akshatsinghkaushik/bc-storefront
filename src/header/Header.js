@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import CartPopUp from './CartPopUp';
 
-const Header = () => {
+const Header = ({}) => {
+  const [cartPopUp, setCartPopUp] = useState(false);
+
   return (
     <>
       <header className="header">
@@ -22,7 +25,15 @@ const Header = () => {
             to="/"
             style={{ textDecoration: 'none', color: 'black' }}
           >
-            Store
+            Shop
+            <img
+              style={{
+                height: '0.7rem',
+                width: '0.7rem',
+                marginLeft: '0.3rem',
+              }}
+              src={`/media/chevron-down-solid.svg`}
+            />
           </Link>
           <Link
             className="header-link"
@@ -37,12 +48,36 @@ const Header = () => {
             style={{ textDecoration: 'none', color: 'black' }}
           >
             More
+            <img
+              style={{
+                height: '0.7rem',
+                width: '0.7rem',
+                marginLeft: '0.3rem',
+              }}
+              src={`/media/chevron-down-solid.svg`}
+            />
           </Link>
         </div>
         <div className="cart-icon">
-          <Link to="/cart" style={{ textDecoration: 'none', color: 'black' }}>
+          <div
+            onClick={() => setCartPopUp(!cartPopUp)}
+            style={{ cursor: 'pointer' }}
+          >
             My Cart
-          </Link>
+            <img
+              style={{
+                height: '0.7rem',
+                width: '0.7rem',
+                marginLeft: '0.5rem',
+              }}
+              src={
+                cartPopUp
+                  ? `/media/chevron-right-solid.svg`
+                  : `/media/chevron-down-solid.svg`
+              }
+            />
+          </div>
+          <CartPopUp cartPopUp={cartPopUp} setCartPopUp={setCartPopUp} />
         </div>
       </header>
     </>

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './CategoryItemOverlay.css';
 import { Link } from 'react-router-dom';
+import CartContext from '../context/CartContext';
 
-const CategoryItemOverlay = ({ addItemToCart, hover, hoverElem, item }) => {
+const CategoryItemOverlay = ({ hover, hoverElem, item }) => {
+  const cartContext = useContext(CartContext);
+
   return (
     <div
       className="overlay"
@@ -21,7 +24,7 @@ const CategoryItemOverlay = ({ addItemToCart, hover, hoverElem, item }) => {
       </Link>
       <button
         className="overlay-add-to-cart"
-        onClick={() => addItemToCart(item)}
+        onClick={() => cartContext.addItemToCart(item)}
       >
         ADD TO CART
       </button>

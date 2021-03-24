@@ -1,0 +1,95 @@
+.cart-popup {
+  position: absolute;
+  top: 4.1rem;
+  width: 30%;
+  height: max-content;
+  min-height: max-content;
+  background-color: white;
+  left: 69.9%;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.popup-items-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.popup-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  padding: 0.5rem;
+}
+
+.popup-item-details {
+  margin: 0.5rem 0 0 1rem;
+}
+
+.popup-item-details h3 {
+  margin: 0;
+  padding: 0;
+  font-size: medium;
+}
+
+.popup-item-action {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 1rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  transform: translateY(-55%);
+}
+
+.popup-product {
+  display: flex;
+  flex-direction: row;
+}
+
+.popup-item-image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+
+.popup-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup-footer-checkout {
+  margin: 1rem 1rem 1rem 0;
+  background: none;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 1rem 2rem 1rem 2rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-size: small;
+}
+
+.popup-footer-view {
+  margin: 1rem 0 1rem 1rem;
+  box-shadow: 0px 0px 0px 1px black inset;
+  text-decoration: none;
+  background: none;
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem 1rem 2rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  font-size: small;
+}

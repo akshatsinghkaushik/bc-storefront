@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './CategoryItems.css';
 import CategoryItemOverlay from './CategoryItemOverlay';
+import CartContext from '../context/CartContext';
 
-const CategoryItems = ({ items, addItemToCart }) => {
+const CategoryItems = () => {
   const [hoverElem, setHoverElem] = useState(false);
   const [hover, setHover] = useState(false);
+  const cartContext = useContext(CartContext);
 
   return (
     <div className="category-items">
       <div className="items-grid">
-        {items.map((item, index) => (
+        {cartContext.products.map((item, index) => (
           <div
             key={`item-${index}`}
             className="grid-item"
@@ -34,7 +36,6 @@ const CategoryItems = ({ items, addItemToCart }) => {
             />
             <CategoryItemOverlay
               item={item}
-              addItemToCart={addItemToCart}
               hover={hover}
               hoverElem={hoverElem}
             />

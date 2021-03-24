@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Product.css';
+import CartContext from '../context/CartContext';
 
-const Product = ({ match, getProduct, addItemToCart }) => {
+const Product = ({ match }) => {
   const [quantity, setQuantity] = useState(1);
-  const product = getProduct(match.params.id);
+  const cartContext = useContext(CartContext);
+
+  const product = cartContext.getProduct(match.params.id);
 
   return (
     <div className="Product">
@@ -44,7 +47,7 @@ const Product = ({ match, getProduct, addItemToCart }) => {
               </div>
               <button
                 className="add-to-cart"
-                onClick={() => addItemToCart(product, quantity)}
+                onClick={() => cartContext.addItemToCart(product, quantity)}
               >
                 ADD TO CART
               </button>

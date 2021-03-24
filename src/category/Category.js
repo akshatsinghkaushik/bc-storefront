@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Category.css';
 import CategoryItems from './CategoryItems';
 
-const Category = ({ products, addItemToCart }) => {
+const Category = () => {
   return (
     <>
       <div className="Category">
@@ -24,7 +24,7 @@ const Category = ({ products, addItemToCart }) => {
             </p>
           </header>
         </div>
-        <CategoryItems items={products} addItemToCart={addItemToCart} />
+        <CategoryItems />
       </div>
     </>
   );

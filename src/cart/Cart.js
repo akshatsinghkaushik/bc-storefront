@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import './Cart.css';
+import CartContext from '../context/CartContext';
 
-const Cart = ({ updateCartMap, parentCartMap }) => {
-  const [cartMap, setCartMap] = useState(parentCartMap);
-  const [cartArr, setCartArr] = useState(Array.from(cartMap.values()));
+const Cart = ({}) => {
+  const cartContext = useContext(CartContext);
 
   const containsColor = (text) => {
     const colors = [
@@ -28,45 +28,6 @@ const Cart = ({ updateCartMap, parentCartMap }) => {
     return false;
   };
 
-  const deleteCartItem = (item) => {
-    let map = cartMap;
-    map.delete(item.title);
-    setCartMap(map);
-    setCartArr(Array.from(map.values()));
-    updateCartMap(map);
-  };
-
-  const updateCartItemQuantity = (item, plusminus) => {
-    let map = cartMap;
-    const mapItem = cartMap.get(item.title);
-    if (mapItem) {
-      if (plusminus == '+') {
-        map.set(item.title, {
-          ...item,
-          quantity: mapItem.quantity + 1,
-        });
-      } else if (plusminus == '-') {
-        if (mapItem.quantity - 1 == 0) {
-          map.delete(item.title);
-        } else {
-          map.set(item.title, {
-            ...item,
-            quantity: mapItem.quantity - 1,
-          });
-        }
-      }
-    }
-    setCartMap(map);
-    setCartArr(Array.from(map.values()));
-    updateCartMap(map);
-  };
-
-  const getCartTotal = () => {
-    let total = 0.0;
-    cartArr.map((item) => (total += item.price * item.quantity));
-    return total;
-  };
-
   return (
     <div className="Cart">
       <header className="cart-title">
@@ -82,8 +43,13 @@ const Cart = ({ updateCartMap, parentCartMap }) => {
           </div>
         </div>
         <div className="cart-items-grid">
-          {cartArr &&
-            cartArr.map((item, index) => (
+          {cartContext.cartMapArr.length === 0 ? (
+            <div style={{ textAlign: 'center' }}>No Items in Cart</div>
+          ) : (
+            ''
+          )}
+          {cartContext.cartMapArr &&
+            cartContext.cartMapArr.map((item, index) => (
               <div key={`cart-item-${index}`}>
                 <hr style={{ height: '1px', width: '100%' }} />
                 <div className="cart-grid-item">
@@ -114,12 +80,16 @@ const Cart = ({ updateCartMap, parentCartMap }) => {
                       <div className="incre-decre-buttons">
                         <button
                           className="incre-button"
-                          onClick={() => updateCartItemQuantity(item, '+')}
+                          onClick={() =>
+                            cartContext.updateCartItemQuantity(item, '+')
+                          }
                         >
                           +
                         </button>
                         <button
-                          onClick={() => updateCartItemQuantity(item, '-')}
+                          onClick={() =>
+                            cartContext.updateCartItemQuantity(item, '-')
+                          }
                         >
                           -
                         </button>
@@ -130,7 +100,7 @@ const Cart = ({ updateCartMap, parentCartMap }) => {
                     </div>
                     <button
                       className="action"
-                      onClick={() => deleteCartItem(item)}
+                      onClick={() => cartContext.deleteCartItem(item)}
                     >
                       X
                     </button>
@@ -150,8 +120,8 @@ const Cart = ({ updateCartMap, parentCartMap }) => {
                 <div>Total</div>
               </div>
               <div className="prices">
-                <div>$ {Number(getCartTotal()).toFixed(2)}</div>
-                <div>${Number(getCartTotal()).toFixed(2)} CAD</div>
+                <div>$ {Number(cartContext.getCartTotal()).toFixed(2)}</div>
+                <div>${Number(cartContext.getCartTotal()).toFixed(2)} CAD</div>
               </div>
             </div>
           </div>
@@ -160,7 +130,7 @@ const Cart = ({ updateCartMap, parentCartMap }) => {
         <div className="cart-overview">
           <Link to={'/'}>Continue Shopping</Link>
           <button className="cart-footer-button">
-            CHECKOUT (${Number(getCartTotal()).toFixed(2)})
+            CHECKOUT (${Number(cartContext.getCartTotal()).toFixed(2)})
           </button>
         </div>
       </div>
